@@ -54,7 +54,7 @@
 											echo '</div>';
 
 											
-											if (isset($_SESSION['user'])) {
+											if (isset($_COOKIE['ID'])) {
 												echo 
 													'<div class="messages" id="'.$read_news["id"].'">
 														<input type="text">

@@ -14,7 +14,12 @@
 	}
 	
 	if($id != -1) {
-		$_SESSION['user'] = $id;
+		setcookie("ID", $id, [
+        	'expires' => time() + 3600,
+        	'path' => '/',
+        	'secure' => true,
+        	'httponly'=> true
+    	]);
 	}
 	echo md5(md5($id));
 ?>
